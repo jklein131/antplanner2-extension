@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Ant Planner",
+  "description": "Adds button to WebReg that export's class schedule to AntPlanner.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage",
+	"tabs",
+	"http://*.reg.uci.edu:8889/cgi-bin/*",
+	"https://antplanner.appspot.com/*"
+	
+  ],
+  "externally_connectable": {
+  "matches": ["http://*.reg.uci.edu:8889/cgi-bin/*","https://antplanner.appspot.com/*"] 
+  },
+  "content_scripts": [{
+    "js": ["thirdparty/jquery-3.2.1.min.js","content.js"],
+    "matches": ["http://*.reg.uci.edu:8889/cgi-bin/*"] 
+	}
+  ]
+}
